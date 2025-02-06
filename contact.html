@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EagleEye</title>
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="contact-page">
+
+    <!-- header -->
+    <header class="header">
+        <div class="nav-section">
+            <div class="brand-and-navBtn">
+                <span class="brand-name">
+                    <span class="darkred">E</span>agl<span class="darkred">e</span> <span class="darkred">E</span>y<span class="darkred">e</span>Phöťògraphy
+                </span>
+                <span class="navBtn flex">
+                    <i class="fas fa-bars"></i>
+                </span>
+            </div>
+
+            <!-- navigation menu -->
+            <nav class="top-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="Booking.html">Booking</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="container about">
+            <div class="about-content">
+                <div class="about-img flex">
+                    <img src="images/369536782_818937766567102_1429466975215704229_n.jpg" alt="photographer img">
+                </div>
+                <h2>I'm Lihle Tshabe</h2>
+                <h3>Photographer | Graphic Designer</h3>
+            </div>
+        </div>
+    </header>
+    <!-- end of header -->
+
+    <!-- main -->
+    <section class="section-five">
+        <div class="container">
+            <div class="contact-top">
+                <h3>CONTACT ME</h3>
+                <p>If you have any questions, would like to inquire about our services, or want to book a session, please feel free to reach out. You can contact me via email, phone, or by filling out the contact form below. I look forward to hearing from
+                    you and capturing your special moments!</p>
+            </div>
+            <div class="contact-middle">
+                <div>
+                    <span class="contact-icon">
+                            <i class = "fas fa-map-signs"></i>
+                        </span>
+                    <span>Address</span>
+                    <p>56 Davis End Street, Johannesburg </p>
+                </div>
+
+                <div>
+                    <span class="contact-icon">
+                            <i class = "fas fa-phone"></i>
+                        </span>
+                    <span>Contact Number</span>
+                    <p>(067) 307-5428</p>
+                </div>
+
+                <div>
+                    <span class="contact-icon">
+                            <i class = "fas fa-paper-plane"></i>
+                        </span>
+                    <span>Email Address</span>
+                    <p>Tshabe05@gmail.com</p>
+                </div>
+
+                <div>
+                    <span class="contact-icon">
+                            <i class = "fas fa-globe"></i>
+                        </span>
+                    <span>Website</span>
+                    <p>www.eagle_eye.com</p>
+                </div>
+            </div>
+
+            <div class="contact-bottom">
+                <form class="form" id="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" rows="9" placeholder="Message" required></textarea>
+                    <input type="submit" class="btn" value="Send Message">
+                </form>
+                <p id="success-message" style="display: none; color: green; margin-top: 10px;">Your message has been sent successfully!</p>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+    <!-- end of main -->
+
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-container container">
+        </div>
+        <p>&copy; Copyright Teboho Boye . made by TobyTech</p>
+    </footer>
+    <!-- end of footer -->
+
+
+    <script src="script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init({
+                publicKey: "lBI-NN3hEMcyMN0_n",
+            });
+        })();
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const message = urlParams.get('message');
+            if (message) {
+                const messageInput = document.querySelector('#contact-form textarea[name="message"]');
+                messageInput.value = decodeURIComponent(message);
+            }
+        });
+    </script>
+
+</body>
+
+</html>
